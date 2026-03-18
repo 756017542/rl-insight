@@ -45,3 +45,7 @@ jobs:
       - name: Run cluster_analyse tests
         run: |
           pytest -s -x tests/cluster_analysis
+
+      - name: Run special_e2e tests
+        run: |
+          pytest -s -x tests/special_e2e
