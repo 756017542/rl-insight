@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import sys
+from pathlib import Path
 from rl_insight.main import main
 
 
@@ -20,7 +21,7 @@ def test_torch_e2e_with_input_path(monkeypatch, tmp_path):
     # Get the root directory of the project
     current_file = Path(__file__).resolve()
     project_root = current_file.parents[2]
-    
+
     # Get the input data path
     input_dir = project_root / "data" / "torch_data"
     output_dir = tmp_path / "torch_output"
