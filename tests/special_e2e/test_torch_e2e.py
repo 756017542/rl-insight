@@ -13,32 +13,28 @@
 # limitations under the License.
 
 import sys
-from pathlib import Path
 from rl_insight.main import main
 
 
 def test_torch_e2e_with_input_path(monkeypatch, tmp_path):
-    # 定义输入输出目录（相对于当前工作目录）
-    test_dir = Path(__file__).parent.parent.parent
-    input_dir = test_dir / "torch_data"
+    # Define input and output directories
+    input_dir = tmp_path / "torch_data"
     output_dir = tmp_path / "torch_output"
 
-    # 确保输入目录存在
+    # Ensure the input directory exists
     assert input_dir.exists(), f"Input directory {input_dir} does not exist"
 
-    # 设置命令行参数
+    # Set command line parameters
     test_args = [
         "main.py",
         f"--input-path={input_dir}",
         f"--output-path={output_dir}",
-        "--profiler-type=torch",  # 显式指定（默认 mstx）
-        # 其他参数可按需添加，如 --vis-type=html（默认）、--rank-list=all（默认）
+        "--profiler-type=torch",
     ]
     monkeypatch.setattr(sys, "argv", test_args)
 
-    # 执行主函数
     main()
 
-    # 验证输出文件（生成 rl_timeline.html）
+    # Verify output file
     output_file = output_dir / "rl_timeline.html"
     assert output_file.exists()
