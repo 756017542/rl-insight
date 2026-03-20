@@ -1,4 +1,4 @@
-name: special_e2e
+name: profiling_data_analysis_st
 
 on:
   push:
@@ -42,6 +42,6 @@ jobs:
           pip install -r requirements.txt
           pip install -e .
 
-      - name: Run special_e2e tests
+      - name: Run profiling_data_analysis_st tests
         run: |
           pytest -s -x tests/special_e2e
