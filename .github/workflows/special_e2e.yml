@@ -44,4 +44,4 @@ jobs:
 
       - name: Run profiling_data_analysis_st tests
         run: |
-          pytest -s -x tests/special_e2e
+          pytest -s -x tests/special_e2e --timeout=300 -v
