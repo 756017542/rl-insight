@@ -18,15 +18,6 @@
     }
   },
   {
-    "name": "process_sort_index",
-    "pid": 3550586784,
-    "tid": 0,
-    "ph": "M",
-    "args": {
-      "sort_index": 29
-    }
-  },
-  {
     "name": "thread_name",
     "pid": 3550586784,
     "tid": 0,
@@ -54,15 +45,6 @@
     }
   },
   {
-    "name": "thread_sort_index",
-    "pid": 3550586784,
-    "tid": 1,
-    "ph": "M",
-    "args": {
-      "sort_index": 1
-    }
-  },
-  {
     "name": "thread_name",
     "pid": 3550586784,
     "tid": 2,
@@ -72,30 +54,12 @@
     }
   },
   {
-    "name": "thread_sort_index",
-    "pid": 3550586784,
-    "tid": 2,
-    "ph": "M",
-    "args": {
-      "sort_index": 2
-    }
-  },
-  {
     "name": "thread_name",
     "pid": 3550586784,
     "tid": 3,
     "ph": "M",
     "args": {
       "name": "Free"
-    }
-  },
-  {
-    "name": "thread_sort_index",
-    "pid": 3550586784,
-    "tid": 3,
-    "ph": "M",
-    "args": {
-      "sort_index": 3
     }
   },
   {
