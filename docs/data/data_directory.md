@@ -7,8 +7,9 @@
 └── <role>/
     └── prof_*.json.gz
 ```
-### 数据解析文件 prof_*.json.gz，解析文件内容包含distrubutedInfo、traceEvent等字段，数据内容一般包含ts、dur等字段，解析文件内容示例：
-json里需要有
+
+数据解析文件 prof_*.json.gz，解析文件内容包含distrubutedInfo、traceEvent等字段，数据内容一般包含ts、dur等字段，解析文件内容示例：
+
 ```
 {
     "schemaVersion": 1,
@@ -66,7 +67,8 @@ json里需要有
         └── ASCEND_PROFILER_OUTPUT/
             └── trace_view.json
 ```
-### 数据解析文件 trace_view.json，解析文件内容必须包含"ph": "M"，且"name": "Overlap Analysis"对应"pid"的数据，该数据一般包含ts、dur等字段，解析文件内容示例：
+
+数据解析文件 trace_view.json，解析文件内容必须包含"ph": "M"，且"name": "Overlap Analysis"对应"pid"的数据，该数据一般包含ts、dur等字段，解析文件内容示例：
 
 ```
 [
